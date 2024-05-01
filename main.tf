@@ -14,6 +14,10 @@ terraform {
 // Currently has to be existing vpc
 resource "aws_vpc" "velody-vpc" {
   cidr_block = "172.31.0.0/16"
+
+  tags = {
+    Name = "velody-vpc"
+  }
 }
 
 resource "aws_subnet" "velody-subnet-1" {
